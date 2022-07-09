@@ -30,10 +30,10 @@ const AboutInfo = ({ allFollowing, allFollowers }) => {
   return (
     <div>
       <Container>
-        <h1 className='text-warning m-3 text-center bg-dark'> In this section please select a list</h1>
+        <h1 className='text-warning m-3 text-center'> In this section please select a list</h1>
         <div className='m-4 d-flex justify-content-center'>
-          <button className='btn btn-danger m-1 fs-5' onClick={() => setSelect(farkFollowers)}>List of users you are following but <span className='text-warning'>they don't follow you.</span> </button>
-          <button className='btn btn-danger m-1 fs-5' onClick={() => setSelect(farkFollowing)}>List of users which is following you but <span className='text-warning'> you don't follow them.</span></button>
+          <button className='btn btn-danger m-1 fs-5' onClick={() => setSelect(farkFollowers)}>List of users which you are following but <span className='text-warning'>they don't follow you.</span> </button>
+          <button className='btn btn-danger m-1 fs-5' onClick={() => setSelect(farkFollowing)}>List of users who follow you but <span className='text-warning'> you don't follow them back.</span></button>
           
         </div>
         <Row xs={2} md={3} lg={4}>

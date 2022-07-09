@@ -15,8 +15,8 @@ const NavBar = () => {
     <div>
       <Navbar bg="dark" variant="dark">
         {isOpen ? (<Container>
-          <Navbar.Brand href="/home">GitHub Followers</Navbar.Brand>
-          <Nav className="me-auto">
+          <Navbar.Brand className='text-danger' href="/home">GitHub App</Navbar.Brand>
+          <Nav className="me-end">
             <NavLink to="/home">All Followers</NavLink>
             <NavLink to="/about">Followers/Following</NavLink>
             <NavLink to="/" onClick={handleClick}>Log out</NavLink>
