@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+body{
+  background-color: #666;
+}
+a{
+  text-decoration: none;
+  color:#fff;
+  padding: 1rem;
+}
+a:hover{
+  text-decoration: none;
+  color:#666;
+}
+
+.pagination-section{
+  display: flex;
+  justify-content: center;
+}
