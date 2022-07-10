@@ -14,7 +14,6 @@ function App() {
     try {
       const { data } = await axios.get(`https://api.github.com/users/${userName}/followers?per_page=100`)
       setAllFollowers(data)
-      console.log(userName);
     } catch (error) {
       setvalidUser("User not found. Please check your username and try again.. 👀")
     }
@@ -22,8 +21,14 @@ function App() {
   }
 
   const getFollowing = async () => {
-    const { data } = await axios.get(`https://api.github.com/users/${userName}/following?per_page=100`)
-    setAllFollowing(data)
+
+    try {
+      const { data } = await axios.get(`https://api.github.com/users/${userName}/following?per_page=100`)
+      setAllFollowing(data)
+    } catch (error) {
+      console.log("test");
+    }
+
   }
 
   useEffect(() => {
@@ -34,7 +39,7 @@ function App() {
 
   return (
     <div className="container">
-      <AppRouter allFollowers={allFollowers} allFollowing={allFollowing} validUser={validUser}/>
+      <AppRouter allFollowers={allFollowers} allFollowing={allFollowing} validUser={validUser} />
     </div>
   );
 }
