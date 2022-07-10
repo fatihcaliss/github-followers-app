@@ -8,7 +8,6 @@ const Followers = ({followers}) => {
   const {loading,followersList}=followers
   const [followersPerPage]=useState(12)
   const [currentPage,setCurrentPage]=useState(1)
-
   const indexOfLastFollower=currentPage* followersPerPage
   const indexOfFirstFollower= indexOfLastFollower-followersPerPage
   const currentFollowers=followersList.slice(indexOfFirstFollower,indexOfLastFollower)
