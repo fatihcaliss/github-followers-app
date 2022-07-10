@@ -13,17 +13,18 @@ const NavBar = () => {
   }
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
-        {isOpen ? (<Container>
-          <Navbar.Brand className='text-danger' href="/home">GitHub App</Navbar.Brand>
-          <Nav className="me-end">
-            <NavLink to="/home">All Followers</NavLink>
-            <NavLink to="/about">Followers/Following</NavLink>
-            <NavLink to="/" onClick={handleClick}>Log out</NavLink>
-          </Nav>
-        </Container>) : (<Container>
-          <Navbar.Brand className='text-danger' href="">GitHub App</Navbar.Brand> </Container>)}
-
+      <Navbar  expand="lg" bg="dark" variant="dark">
+        {isOpen ? (
+          <Container>
+            <Navbar.Brand className='text-danger' href="/home">GitHub App</Navbar.Brand>
+            <Nav className="">
+              <NavLink to="/home">All Followers</NavLink>
+              <NavLink to="/about">Followers/Following</NavLink>
+              <NavLink to="/" onClick={handleClick}>Log out</NavLink>
+            </Nav>
+          </Container>) :
+          (<Container>
+            <Navbar.Brand className='text-danger' href="">GitHub App</Navbar.Brand> </Container>)}
       </Navbar>
     </div>
   )
